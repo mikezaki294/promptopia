@@ -32,7 +32,7 @@ const MyProfile = () => {
 
   // Edit a single post created by user
   const handleEdit = async (post) => {
-    router.push(`/update-prompt?id=${post._id}`);
+    router.push(`/edit-prompt?id=${post._id}`);
   };
 
   // Delete a single post created by user
