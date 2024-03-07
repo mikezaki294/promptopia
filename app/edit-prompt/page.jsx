@@ -23,17 +23,15 @@ const EditPrompt = () => {
       const data = await response.json();
 
       setPost({
-        prompt: data.prompt,
-        tag: data.tag,
+        prompt: data?.prompt,
+        tag: data?.tag,
       });
     };
 
     if (promptId) getPromptDetails();
   }, [promptId]);
 
-  //Edit prompt functionality
   const updatePrompt = async (e) => {
-    // Prevent default reloading of browser
     e.preventDefault();
     setSubmitting(true);
 
